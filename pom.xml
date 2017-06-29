@@ -23,8 +23,8 @@
 		</repository>
 	</distributionManagement>
 	<scm>
-		<connection>scm:svn:https://github.com/RogerParkinson/test-repo</connection>
-		<developerConnection>scm:git:https://github.com/RogerParkinson/test-repo</developerConnection>
+		<connection>scm:svn:git@github.com/RogerParkinson/test-repo</connection>
+		<developerConnection>scm:git:git@github.com/RogerParkinson/test-repo</developerConnection>
 	  <tag>HEAD</tag>
   </scm>
 	<issueManagement>
