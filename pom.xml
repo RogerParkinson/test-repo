@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.harmoney</groupId>
 	<artifactId>test-repo</artifactId>
-	<version>0.0.81</version>
+	<version>0.0.82-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>test-repo</name>
 	<properties>
@@ -25,7 +25,7 @@
 	<scm>
 		<connection>scm:svn:https://github.com/RogerParkinson/test-repo</connection>
 		<developerConnection>scm:git:https://github.com/RogerParkinson/test-repo</developerConnection>
-	  <tag>test-repo-0.0.81</tag>
+	  <tag>HEAD</tag>
   </scm>
 	<issueManagement>
 		<system>GitHub</system>
