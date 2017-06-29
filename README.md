@@ -11,7 +11,9 @@ git merge production
 wget https://s3-ap-southeast-2.amazonaws.com/test-hello-springboot/settings.xml
 mvn -B --settings ./settings.xml release:clean release:prepare release:perform -Dusername=$gitusername -Dpassword=$gitpassword
 
+
 Todo:
 
  * A release goes recursive. The commit of the new version causes the trigger of a new build
  * Review security on the S3
+ * merge to production did not trigger. Huh?
