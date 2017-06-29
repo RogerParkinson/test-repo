@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.harmoney</groupId>
 	<artifactId>test-repo</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>test-repo</name>
 	<properties>
@@ -33,6 +33,10 @@
 	</issueManagement>
 	<build>
 		<plugins>
+	        <plugin>
+	          <artifactId>maven-release-plugin</artifactId>
+	          <version>2.4.1</version>
+	        </plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
