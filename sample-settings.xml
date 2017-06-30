@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd"
+	xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<activeProfiles>
+		<activeProfile>nexus</activeProfile>
+	</activeProfiles>
+
+	<profiles>
+		<profile>
+			<id>nexus</id>
+
+			<repositories>
+				<repository>
+					<id>central</id>
+					<url>https://repo1.maven.org/maven2</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+				</repository>
+				<repository>
+					<id>snapshots</id>
+					<url>NEXUSURL/nexus/content/repositories/efs-snapshots</url>
+					<releases>
+						<enabled>false</enabled>
+						<updatePolicy>always</updatePolicy>
+						<checksumPolicy>warn</checksumPolicy>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+						<checksumPolicy>fail</checksumPolicy>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>releases</id>
+					<url>NEXUSURL/nexus/content/repositories/efs-releases</url>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+						<checksumPolicy>warn</checksumPolicy>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+						<updatePolicy>never</updatePolicy>
+						<checksumPolicy>fail</checksumPolicy>
+					</snapshots>
+				</repository>
+			</repositories>
+
+			<pluginRepositories>
+				<pluginRepository>
+					<id>central-plugins</id>
+					<url>https://repo1.maven.org/maven2</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+				</pluginRepository>
+				<pluginRepository>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>plugins</id>
+					<name>plugins-release</name>
+					<url>NEXUSURL/nexus/content/repositories/efs-releases</url>
+				</pluginRepository>
+			</pluginRepositories>
+			
+		</profile>
+	</profiles>
+
+	<servers>
+		<server>
+			<id>plugins</id>
+			<username>deployment</username>
+			<password>NEXUSPWD</password>
+		</server>
+		<server>
+			<id>releases</id>
+			<username>deployment</username>
+			<password>NEXUSPWD</password>
+		</server>
+		<server>
+			<id>snapshots</id>
+			<username>deployment</username>
+			<password>NEXUSPWD</password>
+		</server>
+		<server>
+			<id>my-scm-server</id>
+			<username>GITUSER</username>
+			<password>GITPWD</password>
+		</server>
+	</servers>
+
+</settings>
+
