@@ -5,7 +5,9 @@
 Codeship Setup Script
 
 ```
-wget https://s3-ap-southeast-2.amazonaws.com/test-hello-springboot/settings.xml
+wget $settingsurl
+sed -i -e 's/NEXUSURL/$nexusurl/g' settings.xml
+sed -i -e 's/NEXUSPWD/$nexuspwd/g' settings.xml
 mvn --settings ./settings.xml  clean deploy
 ```
 
@@ -21,7 +23,9 @@ git pull origin master
 git checkout production
 git checkout master
 git merge production
-wget https://s3-ap-southeast-2.amazonaws.com/test-hello-springboot/settings.xml
+wget $settingsurl
+sed -i -e 's/NEXUSURL/$nexusurl/g' settings.xml
+sed -i -e 's/NEXUSPWD/$nexuspwd/g' settings.xml
 mvn -B --settings ./settings.xml release:clean release:prepare release:perform -Dusername=$CI_COMMITTER_USERNAME -Dpassword=$gitpassword
 ```
 A push or merge to branch `production` will trigger Codeship to run this script. It results in a release version number being generated and the resulting build posted to nexus in the release repository. The code that built the release is tagged with the release version number.

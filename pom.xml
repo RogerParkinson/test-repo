@@ -10,7 +10,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.source.version>1.7</project.source.version>
 		<project.target.version>1.7</project.target.version>
-		<nexus.url>http://ec2-52-65-239-111.ap-southeast-2.compute.amazonaws.com:8081/nexus/</nexus.url>
+		<project.scm.id>my-scm-server</project.scm.id>
 	</properties>
 	<distributionManagement>
 		<snapshotRepository>
@@ -25,11 +25,11 @@
 	<scm>
 		<connection>scm:svn:https://github.com/RogerParkinson/test-repo</connection>
 		<developerConnection>scm:git:https://github.com/RogerParkinson/test-repo</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/harmoney-dev/ms-credit-access/issues</url>
+		<url>https://github.com/RogerParkinson/test-repo/issues</url>
 	</issueManagement>
 	<build>
 		<plugins>
