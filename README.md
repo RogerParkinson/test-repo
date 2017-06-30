@@ -28,9 +28,3 @@ A push or merge to branch `production` will trigger Codeship to run this script.
 
 It does depend on the gitpassword environment variable set up in the Codeship project
  
-Todo:
-
- * Review security on the S3
- * merge to production did not trigger. Huh?
- 
- 
